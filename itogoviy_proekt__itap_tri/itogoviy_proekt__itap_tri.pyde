@@ -1,5 +1,6 @@
+import time
 x = 150
-y = 5
+y = -5
 d = 0
 def setup ():
     size (500, 500)
@@ -16,10 +17,15 @@ def draw ():
     rect (250, 80, 100, 200)
     rect (450, 0, 100, 500)
     rect (250, 380, 500, 150)
+    # push()
+    # fill (255)
+    # stroke (139, 0, 255)
+    # strokeWeight (5)
+    # rect (170, 180, 200, 100)
+    # pop()
     pop ()
     push ()
     fill (142, 210, 255)
-    #ellipse (x, y, 70, 70)
     pop ()
     push ()
     fill (255, 0, 0)
@@ -37,32 +43,41 @@ def draw ():
                 x = x - 1
             if keyCode == RIGHT:
                 x = x + 1
-    if x >= 500:
-        x = 150
-        y = 5
-    if x <= 50:
-        x = 150
-        y = 5
-    if y >= 50:
-        y = 5
-        x = 150
-    if y <= 500:
+    if y >= 490:
         y = 5
         x = 150
     
-    if x + 80 >= 0 and y < 500 and y + 90 >= 0 and y <= 150:
+    if x + 45 >= 0 and y < -20 and y + 90 >= 0 and y <= 150:
         x = 150
         y = 5
-    if y + 90 >= 80 and y < 230 and x + 80 >= 150 and x <= 250:
+    if y + 45 >= 55 and y < 215 and x + 80 >= 150 and x <= 250:
         x = 150
         y = 5
-    if y + 90 >= 80 and y < 280 and x + 80 >= 250 and x <= 350:
+    if y + 45 >= 55 and y < 265 and x + 80 >= 250 and x <= 350:
         x = 150
         y = 5
-    if y + 90 >= 0 and y < 500 and x + 80 >= 450 and x <= 550:
+    if y + 45 >= 0 and y < 500 and x + 80 >= 460 and x <= 550:
         x = 150
         y = 5
-    
+    if y + 45 >= 0 and y < 500 and x + 80 >= 0 and x <= 140:
+        x = 150
+        y = 5
+    if y + 45 >= 350 and y < 530 and x + 80 >= 250 and x <= 750:
+        x = 150
+        y = 5
+    if y + 45 >= 460 and y < 490 and x + 150 and x <= 250:
+        background (255)
+        x = 150
+        y = 5
+        fill (255)
+        stroke (139, 0, 255)
+        strokeWeight (5)
+        rect (170, 180, 200, 100)
+        fill (255, 0, 0)
+        textSize (20)
+        text (u"Победа!", 250, 250)
+        
+        
     
     
     
